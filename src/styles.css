@@ -4,6 +4,7 @@
 :root {
   --background-1: #061019;
   --text-1: #fff;
+  --text-2: #cfd2d5;
   --color-2: #009cb5;
 }
 * {
@@ -39,7 +40,9 @@ button {
 .opacity-1 {
   opacity: 80%;
 }
-
+.text-light {
+  color: var(--text-2);
+}
 .absolute-center {
   position: absolute;
   left: 50%;

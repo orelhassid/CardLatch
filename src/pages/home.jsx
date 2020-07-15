@@ -16,7 +16,7 @@ function Text() {
       <h1 className="title">CARDLATCH</h1>
       <p>building trust between digital and physical</p>
       <hr />
-      <p className="opacity-1">
+      <p className="text-light">
         Flexible and powerfull system <br /> suitable to small and large
         business
       </p>
