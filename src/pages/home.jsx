@@ -1,11 +1,21 @@
 import React from "react";
 import Layout from "../components/layout";
+import Icons from "../components/icons/icons";
 export default () => (
   <Layout>
     <section>
       <Shield />
       <Circle size="small" />
       <Circle size="large" />
+      <Icons />
+    </section>
+    <hr />
+    <section>
+      <h1>SECTION 2</h1>
+    </section>
+    <hr />
+    <section>
+      <h1>SECTION 3</h1>
     </section>
   </Layout>
 );
@@ -20,7 +30,9 @@ function Text() {
         Flexible and powerfull system <br /> suitable to small and large
         business
       </p>
-      <button className="btn-cta">Contact Today</button>
+      <a href="mailto:baruchkahlon@cardlatch.com">
+        <button className="btn-cta">Contact Today</button>
+      </a>
     </div>
   );
 }
@@ -29,8 +41,9 @@ function Shield() {
     <div className="shield">
       <Text />
       <svg
-        width="828"
-        height="1034"
+        width="100%"
+        // width="828"
+        // height="1034"
         viewBox="0 0 828 1034"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

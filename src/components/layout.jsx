@@ -2,7 +2,9 @@ import React from "react";
 import Header from "./header";
 export default ({ children }) => (
   <>
-    <Header />
-    <main>{children}</main>
+    <div className="site">
+      <Header />
+      <main>{children}</main>
+    </div>
   </>
 );
