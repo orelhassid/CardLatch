@@ -3,6 +3,7 @@
 
 :root {
   --background-1: #061019;
+  --background-2: #0a1622;
   --text-1: #fff;
   --text-2: #cfd2d5;
   --color-2: #009cb5;
@@ -83,16 +84,30 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 828px;
+  max-width: 828px;
+  width: 50vw;
   /* width: minmax(828px, 3fr); */
 }
+.shield:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .shield-text {
   text-align: center;
-  font-size: 25px;
+  /* font-size: 10px; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .shield-text .title {
-  font-size: 3em;
+  font-size: 4vw;
   letter-spacing: 15px;
   line-height: 1;
 }
@@ -106,7 +121,7 @@ section {
   /* margin: 50px auto; */
 }
 .shield-text button {
-  font-size: 1em;
+  font-size: 22px;
   width: 270px;
   margin-top: 30px;
 }
@@ -129,20 +144,29 @@ section {
 
 .circle {
   z-index: -1;
+  border-radius: 50%;
+  border: 2px solid #112435;
 }
 
+.circle:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  border-radius: 50%;
+}
 .circle-small {
   width: 50%;
+  background: #0a1622;
 }
 .circle-large {
+  z-index: -2;
   width: 80%;
+  background: #0a1622;
 }
 
 @media only screen and (max-width: 600px) {
   .shield {
     width: 270px;
-  }
-  .shield-text {
   }
   .shield-text .title {
     font-size: 24px;
@@ -154,4 +178,15 @@ section {
     width: 88px;
     font-size: 10px;
   }
+  .circle-large {
+    display: none;
+  }
+  h1 {
+    font-size: 49em;
+  }
+}
+
+.section-overnight {
+  display: flex;
+  flex-direction: column;
 }

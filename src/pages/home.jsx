@@ -1,6 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
 import Icons from "../components/icons/icons";
+
+import Overnight from "../animations/overnight.js";
+
 export default () => (
   <Layout>
     <section>
@@ -10,8 +13,9 @@ export default () => (
       <Icons />
     </section>
     <hr />
-    <section>
-      <h1>SECTION 2</h1>
+    <section className="section-overnight">
+      <h1>Overnight Upgrade</h1>
+      <Overnight />
     </section>
     <hr />
     <section>
