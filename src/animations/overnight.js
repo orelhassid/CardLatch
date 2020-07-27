@@ -8,13 +8,13 @@ export default function Overnight() {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
-    <div>
-      <Lottie options={defaultOptions} height={400} width={400} />
+    <div className="animation">
+      <Lottie options={defaultOptions} />
     </div>
   );
 }

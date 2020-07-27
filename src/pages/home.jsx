@@ -1,26 +1,55 @@
 import React from "react";
 import Layout from "../components/layout";
 import Icons from "../components/icons/icons";
+import Section from "../components/section";
+import SectionCenter from "../components/sectionCenter";
 
 import Overnight from "../animations/overnight.js";
+import Hardware from "../animations/hardware.js";
+import Analytics from "../animations/analytics.js";
+import Alerts from "../animations/alerts.js";
+
+import Number1 from "../animations/number1.js";
+import Number2 from "../animations/number2.js";
+import Number3 from "../animations/number3.js";
+import Number4 from "../animations/number4.js";
 
 export default () => (
   <Layout>
-    <section>
+    <SectionCenter>
       <Shield />
       <Circle size="small" />
       <Circle size="large" />
       <Icons />
-    </section>
-    <hr />
-    <section className="section-overnight">
-      <h1>Overnight Upgrade</h1>
-      <Overnight />
-    </section>
-    <hr />
-    <section>
-      <h1>SECTION 3</h1>
-    </section>
+    </SectionCenter>
+
+    <Section
+      title="Overnight Upgrade"
+      description="A user experience software that integrates with your current access control seamlessly."
+      animation={<Overnight />}
+      number={<Number1 />}
+    ></Section>
+
+    <Section
+      title="No Dedicated HW Required"
+      description="multi-layer of security software-based only, offering multi-layer security.no need of expensive hardware replacement."
+      animation={<Hardware />}
+      number={<Number2 />}
+    ></Section>
+
+    <Section
+      title="Immediate Alert Rapid Action"
+      description="Cardlatch detects real time events, helping stop ongoing attacks"
+      animation={<Alerts />}
+      number={<Number3 />}
+    ></Section>
+
+    <Section
+      title="Advanced Analytics"
+      description="AI/ML-based system that reflects business Intelligence in real-time and provides a recommended course of action"
+      animation={<Analytics />}
+      number={<Number4 />}
+    ></Section>
   </Layout>
 );
 
@@ -64,23 +93,5 @@ function Shield() {
 }
 
 function Circle({ size }) {
-  return (
-    <div className={`circle absolute-center circle-${size}`}>
-      <svg
-        width="100%"
-        viewBox="0 0 1336 1336"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.5"
-          d="M668 1334.66C1036.19 1334.66 1334.67 1036.18 1334.67 667.99C1334.67 299.798 1036.19 1.32001 668 1.32001C299.808 1.32001 1.33008 299.798 1.33008 667.99C1.33008 1036.18 299.808 1334.66 668 1334.66Z"
-          fill="#0A1622"
-          stroke="#112435"
-          stroke-width="2"
-          stroke-miterlimit="10"
-        />
-      </svg>
-    </div>
-  );
+  return <div className={`circle absolute-center circle-${size}`}></div>;
 }

@@ -1,0 +1,67 @@
+/* Theme */
+@import "./theme.scss";
+
+/* Grid */
+
+/* Sections Styles */
+
+section {
+  overflow: hidden;
+  min-height: 900px;
+
+  .title {
+    font-size: 54px;
+    font-weight: 500;
+  }
+  .description {
+    font-size: 28px;
+    font-weight: 300;
+    width: 80%;
+  }
+  .number {
+    font-size: 98px;
+  }
+  .graphic {
+    width: 100%;
+
+    .animation {
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+    }
+  }
+}
+
+header {
+  background: #fff;
+  width: 100%;
+  height: 100px;
+}
+
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  align-items: center;
+  justify-items: center;
+  min-height: 900px;
+}
+
+/* Positions */
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-center {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

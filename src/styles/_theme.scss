@@ -1,0 +1,64 @@
+// :root {
+//   --background-1: #061019;
+//   --background-2: #0a1622;
+//   --text-1: #fff;
+//   --text-2: #cfd2d5;
+//   --color-2: #009cb5;
+// }
+
+$themes: (
+  light: (
+    backgroundColor: #fff,
+    textColor: #408bbd,
+    buttonTextColor: #408bbd,
+    buttonTextTransform: none,
+    buttonTextHoverColor: #61b0e7,
+    buttonColor: #fff,
+    buttonBorder: 2px solid #fff,
+  ),
+  dark: (
+    backgroundColor: #061019,
+    textColor: #fff,
+    buttonTextColor: #aaa,
+    buttonTextTransform: uppercase,
+    buttonTextHoverColor: #ddd,
+    buttonColor: #333,
+    buttonBorder: 1px solid #aaa,
+  ),
+);
+
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+$text-settings: (
+  "xs": (
+    font-size: 0.75rem,
+    // 12px
+      line-height: $base-line-height,
+  ),
+  "sm": (
+    font-size: 0.875rem,
+    // 14px
+      line-height: $base-line-height,
+  ),
+  "base": (
+    font-size: 1rem,
+    // 16px
+      line-height: $base-line-height,
+  ),
+  "md": (
+    font-size: 1.125rem,
+    // 18px
+      line-height: $base-line-height * 2,
+  ),
+  "lg": (
+    font-size: 1.25rem,
+    // 20px
+      line-height: $base-line-height * 2,
+  ),
+  "xl": (
+    font-size: 1.5rem,
+    // 24px
+      line-height: $base-line-height * 2,
+  ),
+);

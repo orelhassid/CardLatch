@@ -1,20 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Rubik:wght@300&display=swap");
 
-:root {
-  --background-1: #061019;
-  --background-2: #0a1622;
-  --text-1: #fff;
-  --text-2: #cfd2d5;
-  --color-2: #009cb5;
-}
+// :root {
+//   --background-1: #061019;
+//   --background-2: #0a1622;
+//   --text-1: #fff;
+//   --text-2: #cfd2d5;
+//   --color-2: #009cb5;
+// }
+
+@import "theme";
+@import "mixins";
+
+/* Main Elemects */
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
-  background: var(--background-1);
-  color: var(--text-1);
+  @include theme-aware("background", "backgroundColor");
+  @include theme-aware("color", "textColor");
+  // background: var(--background-1);
+  // color: var(--text-1);
   /* font-family: "Rubik", sans-serif; */
   font-family: "Roboto", sans-serif;
   font-size: 1px;
@@ -23,6 +31,9 @@ body {
 .site {
   display: grid;
 }
+
+/* Normalize Default Elements */
+
 h1 {
   font-family: "Bungee", cursive;
   font-size: 85em;
@@ -37,7 +48,8 @@ a {
   text-decoration: none;
   color: var(--text-1);
 }
-/* Presets */
+
+/* Button */
 .btn-cta {
   /* font-size: 32px; */
   color: #fff;
@@ -47,39 +59,9 @@ a {
   margin: 10px;
 }
 
-.opacity-1 {
-  opacity: 80%;
-}
-.text-light {
-  color: var(--text-2);
-}
-.absolute-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 /* Components */
-header {
-  background: #fff;
-  width: 100%;
-  height: 100px;
-}
 
-main {
-  font-weight: 300;
-}
-
-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Shield */
+/* Shield Component */
 .shield {
   position: relative;
   display: flex;
@@ -126,20 +108,6 @@ section {
   margin-top: 30px;
 }
 
-.shield-path {
-  stroke-dasharray: 500;
-  stroke-width: 4px;
-  stroke: #d11c3d;
-  animation: dash 2s linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 1000;
-  }
-}
-
 /* Circle Shapes */
 
 .circle {
@@ -162,31 +130,4 @@ section {
   z-index: -2;
   width: 80%;
   background: #0a1622;
-}
-
-@media only screen and (max-width: 600px) {
-  .shield {
-    width: 270px;
-  }
-  .shield-text .title {
-    font-size: 24px;
-  }
-  .shield-text p {
-    font-size: 13px;
-  }
-  .shield-text button {
-    width: 88px;
-    font-size: 10px;
-  }
-  .circle-large {
-    display: none;
-  }
-  h1 {
-    font-size: 49em;
-  }
-}
-
-.section-overnight {
-  display: flex;
-  flex-direction: column;
 }
