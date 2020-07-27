@@ -19,7 +19,10 @@ section {
     width: 80%;
   }
   .number {
-    font-size: 98px;
+    width: 50%;
+    svg {
+      width: 100%;
+    }
   }
   .graphic {
     width: 100%;
@@ -35,9 +38,10 @@ section {
 }
 
 header {
-  background: #fff;
+  // background: #fff;
   width: 100%;
-  height: 100px;
+  height: 50px;
+  padding: 17px;
 }
 
 .section-3 {
@@ -64,4 +68,52 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .shield {
+    text-align: center;
+    .shield-text {
+      .title {
+        font-size: 16px;
+        letter-spacing: 5px;
+      }
+      p {
+        font-size: 8px;
+      }
+      button {
+        font-size: 6px;
+        background-color: #408bbd;
+        padding: 5px 7px;
+      }
+    }
+  }
+
+  .section-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 7px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .description {
+      font-size: 18px;
+      font-weight: 300;
+      width: 100%;
+      opacity: 0.8;
+    }
+    .number {
+      width: 20%;
+    }
+    .graphic {
+      width: 100%;
+
+      .animation {
+        width: 100%;
+      }
+    }
+  }
 }

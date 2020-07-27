@@ -22,13 +22,14 @@ export default () => (
       <Circle size="large" />
       <Icons />
     </SectionCenter>
-
+    <hr />
     <Section
       title="Overnight Upgrade"
       description="A user experience software that integrates with your current access control seamlessly."
       animation={<Overnight />}
       number={<Number1 />}
     ></Section>
+    <hr />
 
     <Section
       title="No Dedicated HW Required"
@@ -36,6 +37,7 @@ export default () => (
       animation={<Hardware />}
       number={<Number2 />}
     ></Section>
+    <hr />
 
     <Section
       title="Immediate Alert Rapid Action"
@@ -43,6 +45,7 @@ export default () => (
       animation={<Alerts />}
       number={<Number3 />}
     ></Section>
+    <hr />
 
     <Section
       title="Advanced Analytics"
