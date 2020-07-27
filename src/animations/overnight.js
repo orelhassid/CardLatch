@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "./overnight.json";
 
 export default function Overnight() {
+  const [speed, setSpeed] = useState();
+
+  useEffect(() => {
+    setSpeed(5);
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -14,7 +20,7 @@ export default function Overnight() {
 
   return (
     <div className="animation">
-      <Lottie options={defaultOptions} />
+      <Lottie options={defaultOptions} speed={speed} />
     </div>
   );
 }
